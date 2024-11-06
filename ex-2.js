@@ -1,5 +1,17 @@
 function runningSum(arr) {
   //Start coding here
+  let result = [];
+  let prevNum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (i === 0) {
+      result.push(arr[i]);
+      prevNum = arr[i];
+    } else {
+      prevNum += arr[i];
+      result.push(prevNum);
+    }
+  }
+  return result;
 }
 
 let result1 = runningSum([1, 2, 3, 4]);

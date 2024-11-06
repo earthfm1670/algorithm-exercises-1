@@ -1,5 +1,10 @@
 function singleNumber(nums) {
   // Start coding here
+  let result = nums.filter(
+    (x, index, nums) =>
+      nums.indexOf(x) === index && nums.lastIndexOf(x) === index
+  );
+  return result.pop();
 }
 
 let result1 = singleNumber([2, 2, 1]);
